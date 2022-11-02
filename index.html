@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="lib/chessboardjs/css/chessboard-0.3.0.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container" style="width: 100%; height: 100%;">
+  <h1 style="text-align: center;">Chess</h1>
+  <div class="d-flex justify-content-center" style="width: 100%;">
+    <div></div>
+    <div>
+      <div id="board" class="board" style="width: 600px;"></div>
+      <div class="info mt-3">
+        Level:
+        <select id="search-depth">
+          <option value="2">Easy</option>
+          <option value="3" selected>Normal</option>
+          <option value="4">Hard</option>
+          <option value="5">Very Hard</option>
+        </select>
+    
+        <button id="startBtn">Start Position</button>
+        <button id="clearBtn">Clear Board</button>
+      </div>
+    </div>
+    
+    <div class="ms-4" style="margin-top: 300px; font-size: 20px; width: 250px;">
+      <!-- ------------ history move ------------- -->
+      <span class="fw-bold">Positions evaluated: <span id="position-count"></span></span>
+      <br>
+      <span class="fw-bold">Time: <span id="time"></span></span>
+      <br>
+      <span class="fw-bold">Positions/s: <span id="positions-per-s"></span> </span>
+  
+      <br>
+      <br>
+      <div id="move-history" class="move-history">
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<script src="lib/jquery/jquery-3.2.1.min.js"></script>
+<script src="lib/chessboardjs/js/chess.js"></script>
+<script src="lib/chessboardjs/js/chessboard-0.3.0.js"></script>
+<script src="./script.js"></script>
+<script>
+
+</script>
+</body>
+</html>
