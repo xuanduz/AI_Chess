@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chess</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./bootstrap-5.2.2-dist/css/bootstrap.min.css">
+  <style>
+    .wrapper {
+      background-image: url('./img/background/bg.jpg') ;
+      background-repeat: no-repeat, repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+    a:hover {
+      color: white;
+    }
+    .btn {
+      width: 200px;
+      height: 80px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid wrapper" style="width: 100%; height: 100vh; background-color: black;">
+    <div class="d-flex justify-content-center flex-column align-items-center">
+      <h1 class="mt-4 mb-2 fw-bolder">Chess</h1>
+      <h2>Select game mode</h2>
+      <div class="d-flex gap-4" style="margin-top: 80px;">
+        <a href="./index.html"><button class="btn btn-primary fw-bold">Player vs AI</button></a>
+        <a href="./p_vs_p.html"><button class="btn btn-primary fw-bold">Player vs Player</button></a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -21,39 +21,6 @@ var minimaxRoot = function (depth, game, isMaximisingPlayer) {
   return bestMoveFound;
 };
 
-// var minimax = function (depth, game, isMaximisingPlayer) {
-//   positionCount++;
-//   if (depth === 0) {
-//     return -evaluateBoard(game.board());
-//   }
-
-//   var newGameMoves = game.ugly_moves();
-
-//   if (isMaximisingPlayer) {
-//     var bestMove = -9999;
-//     for (var i = 0; i < newGameMoves.length; i++) {
-//       game.ugly_move(newGameMoves[i]);
-//       bestMove = Math.max(
-//         bestMove,
-//         minimax(depth - 1, game, !isMaximisingPlayer)
-//       );
-//       game.undo();
-//     }
-//     return bestMove;
-//   } else {
-//     var bestMove = 9999;
-//     for (var i = 0; i < newGameMoves.length; i++) {
-//       game.ugly_move(newGameMoves[i]);
-//       bestMove = Math.min(
-//         bestMove,
-//         minimax(depth - 1, game, !isMaximisingPlayer)
-//       );
-//       game.undo();
-//     }
-//     return bestMove;
-//   }
-// };
-
 var minimax = function (depth, game, alpha, beta, isMaximisingPlayer) {
   positionCount++;
   if (depth === 0) {
