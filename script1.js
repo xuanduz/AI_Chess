@@ -104,16 +104,20 @@ $("#startBtn").click(function () {
   board.start();
 
   $("#startBtn").prop("disabled", true);
+  $("#clearBtn").prop("disabled", false);
 });
 
 $("#clearBtn").click(function () {
-  board.clear();
-  game = new Chess();
-  $("#position-count").text("");
-  $("#time").text("");
-  $("#positions-per-s").text("");
-  $("#move-history").empty();
-
-  $("#startBtn").prop("disabled", false);
-  $("#search-depth").prop("disabled", false);
+  var ans = window.confirm('Clear ?')
+  if (ans) {
+    board.clear();
+    game = new Chess();
+    $("#position-count").text("");
+    $("#time").text("");
+    $("#positions-per-s").text("");
+    $("#move-history").empty();
+  
+    $("#startBtn").prop("disabled", false);
+    $("#search-depth").prop("disabled", false);
+  }
 });

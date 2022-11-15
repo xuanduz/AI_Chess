@@ -229,7 +229,7 @@ $("#startBtn").click(function () {
 
   $("#startBtn").prop("disabled", true);
   $("#search-depth").prop("disabled", true);
-
+  $("#clearBtn").prop("disabled", false);
   // board = ChessBoard("board", {
   //   ...cfg,
   //   onMouseoverSquare: onMouseoverSquare,
@@ -237,13 +237,16 @@ $("#startBtn").click(function () {
 });
 
 $("#clearBtn").click(function () {
-  board.clear();
-  game = new Chess();
-  $("#position-count").text("");
-  $("#time").text("");
-  $("#positions-per-s").text("");
-  $("#move-history").empty();
-
-  $("#startBtn").prop("disabled", false);
-  $("#search-depth").prop("disabled", false);
+  var ans = window.confirm('Clear ?')
+  if (ans) {
+    board.clear();
+    game = new Chess();
+    $("#position-count").text("");
+    $("#time").text("");
+    $("#positions-per-s").text("");
+    $("#move-history").empty();
+  
+    $("#startBtn").prop("disabled", false);
+    $("#search-depth").prop("disabled", false);
+  }
 });
