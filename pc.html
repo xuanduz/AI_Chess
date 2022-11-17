@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <link rel="stylesheet" href="lib/chessboardjs/css/chessboard-0.3.0.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./bootstrap-5.2.2-dist/css/bootstrap.min.css">
@@ -12,8 +12,8 @@
 <div class="container" style="width: 100%; height: 100%;">
   <div class="d-flex justify-content-center" style="width: 100%;">
     <div></div>
-    <div style="margin-top: 100px;">
-      <div id="board" class="board" style="width: 600px;"></div>
+    <div style="margin-top: 50px;">
+      <div id="board" class="board" style="width: 650px;"></div>
       <div class="info mt-3 d-flex gap-3">
         <div>
           Level:
@@ -25,23 +25,24 @@
           </select>
         </div>
     
-        <button id="startBtn">Start Position</button>
+        <button id="startBtn">Start Game</button>
         <button id="clearBtn" disabled>Clear Board</button>
         <a href="./home.html"><button>Back to menu</button></a>
       </div>
     </div>
     
-    <div class="ms-4" style="margin-top: 300px; font-size: 20px; width: 250px;">
+    <div class="ms-4" style="margin-top: 300px; font-size: 20px; width: 250px;text-align: center;">
       <!-- ------------ history move ------------- -->
-      <span class="fw-bold">Positions evaluated: <span id="position-count"></span></span>
+      <!-- <span class="fw-bold">Positions evaluated: <span id="position-count"></span></span>
       <br>
       <span class="fw-bold">Time: <span id="time"></span></span>
       <br>
       <span class="fw-bold">Positions/s: <span id="positions-per-s"></span> </span>
-  
+   -->
+      <h4>History move</h4>
       <br>
       <br>
-      <div id="move-history" class="move-history">
+      <div id="move-history" class="move-history" style="max-height: 200px !important">
       </div>
     </div>
   </div>

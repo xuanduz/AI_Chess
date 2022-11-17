@@ -255,6 +255,7 @@ var onDrop = function (source, target) {
 };
 
 var onSnapEnd = function () {
+  move.play();
   board.position(game.fen());
 };
 
@@ -306,6 +307,8 @@ var cfg = {
 };
 board = ChessBoard("board", cfg);
 
+var move = new Audio('./move.wav');
+
 $("#startBtn").click(function () {
   board.start();
 
@@ -316,6 +319,8 @@ $("#startBtn").click(function () {
   //   ...cfg,
   //   onMouseoverSquare: onMouseoverSquare,
   // });
+
+
 });
 
 $("#clearBtn").click(function () {

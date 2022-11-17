@@ -47,7 +47,11 @@ var onDrop = function (source, target) {
   }
 };
 
+
+var move = new Audio('./move.wav');
+
 var onSnapEnd = function () {
+  move.play();
   board.position(game.fen());
 };
 
